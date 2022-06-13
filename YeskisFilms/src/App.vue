@@ -20,6 +20,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <style>
 html {
   background-color: #222;
+  height: 90vh;
 }
 
 nav {
