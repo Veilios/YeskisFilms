@@ -44,13 +44,12 @@
     justify-content: center;
     align-items: center;
     color: #FFFFFF;
-    width: 100%;
-    height: 20%;
+    height: 95vh;
   }
 
   .frame {
-    width: 22%;
-    height: 65vh;
+    width: 275px;
+    height: 380px;
     left: 204px;
     top: 230px;
     background: #FFF;
