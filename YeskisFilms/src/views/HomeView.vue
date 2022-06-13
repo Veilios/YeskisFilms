@@ -1,7 +1,7 @@
 <template>
   <div class="Home">
     <transition class="fade">
-    <h1>Yeskis Films</h1>
+      <h1>Yeskis Films</h1>
     </transition>
   </div>
 </template>
@@ -18,7 +18,17 @@ h1 {
   display: flex;
   align-items: center;
   color: white;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
 
+  100% {
+    opacity: 1;
+  }
+}
 </style>
