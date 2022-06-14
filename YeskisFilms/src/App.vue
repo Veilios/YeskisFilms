@@ -31,7 +31,7 @@ nav {
 }
 
 a {
-  padding-right: 1rem;
   text-decoration: none;
+  padding: 0 1rem;
 }
 </style>
