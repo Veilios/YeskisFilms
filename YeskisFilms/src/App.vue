@@ -33,5 +33,15 @@ nav {
 a {
   text-decoration: none;
   padding: 0 1rem;
+  color: white;
+}
+
+a:hover {
+  color: cyan;
+  transition: ease-in 0.5s;
+}
+
+a:not(:first-child) {
+  border-left: white solid 1px;
 }
 </style>

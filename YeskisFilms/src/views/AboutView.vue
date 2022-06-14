@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="frame">
-      <img class="headshot" src="colin-lloyd-UOBgu1hEj0o-unsplash.jpg" alt="Headshot of Fernando R. Cruz" />
+      <img class="headshot" src="headshot.jpg" alt="Headshot of Fernando R. Cruz" />
       <h3 class="f_name">Fernando R. Cruz</h3>
     </div>
 
