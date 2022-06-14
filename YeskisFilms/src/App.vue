@@ -36,12 +36,12 @@ a {
   color: white;
 }
 
-a:hover {
+nav a:hover {
   color: cyan;
   transition: ease-in 0.5s;
 }
 
-a:not(:first-child) {
+nav a:not(:first-child) {
   border-left: white solid 1px;
 }
 </style>
