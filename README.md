@@ -5,8 +5,7 @@ This site is going to be built using the following technologies:
     - Vue.js
     - Emailjs
     - ScrollMagic
-    - BootstrapVue
-    - PopperJs
+
 
 ## Objectives
     - Add langauages tab into navbar as an option to switch entire site to
