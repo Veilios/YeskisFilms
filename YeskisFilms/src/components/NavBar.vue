@@ -10,6 +10,7 @@ import { RouterLink, RouterView } from 'vue-router';
                 <RouterLink to="/about">About</RouterLink>
                 <RouterLink to="/gallery">Gallery</RouterLink>
                 <RouterLink to="/contact">Contact</RouterLink>
+                <DropDownVue title="Lang" :items="lang"/>
             </nav>
         </div>
     </header>
@@ -18,18 +19,23 @@ import { RouterLink, RouterView } from 'vue-router';
 </template>
 
 <script>
+import DropDownVue from './DropDown.vue';
+
 export default {
     name: 'navbar',
+    components: {
+        DropDownVue
+    },
     data () {
         return {
-            Lang: [
+            lang: [
                 {
                     title: 'En',
-                    active: false
+                    link: "#"
                 },
                 {
                     title: 'Es',
-                    active: true
+                    link: "#"
                 }
             ]
         }
