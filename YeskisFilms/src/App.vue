@@ -1,5 +1,6 @@
 <script setup>
 import NavBarVue from "./components/NavBar.vue";
+import AboutViewVue from "./views/AboutView.vue";
 </script>
 
 <template>

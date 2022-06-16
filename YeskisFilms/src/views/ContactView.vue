@@ -20,15 +20,17 @@
                 </div>
             </div>
 
-            <form class="c-form" ref="form" @submit.prevent="sendEmail">
+            <form class="c-form" ref="form" @submit.prevent="sendEmail" v-if="sent === false">
                 <input type="text" name="user_name" placeholder="Name" />
 
                 <input type="text" name="user_email" placeholder="Email" />
 
                 <textarea name="message" placeholder="Message"></textarea>
 
-                <button class="c-submit" type="submit" value="Send" >Send</button>
+                <button class="c-submit" type="submit" value="Send" v-on:click="sent = true">Send</button>
             </form>
+
+            <p class="success" v-if="sent === true">Thanks! Ill get back in touch soon!</p>
         </div>
     </div>
 </template>
@@ -36,15 +38,17 @@
 <script>
 import emailjs from '@emailjs/browser';
 
-let sent = false;
-
 export default {
+    data() {
+        return {
+            sent: false
+        }
+    },
     methods: {
         sendEmail() {
             emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.$refs.form, 'YOUR_PUBLIC_KEY')
                 .then((result) => {
                     console.log('SUCCESS!', result.text);
-                    sent = true;
                 }, (error) => {
                     console.log('FAILED...', error.text);
                 });
@@ -99,70 +103,70 @@ export default {
 
 
 .c-submit {
-  all: unset;
-  width: 100px;
-  height: 30px;
-  font-size: 16px;
-  background: transparent;
-  border: none;
-  position: relative;
-  color: black;
-  cursor: pointer;
-  z-index: 1;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: black;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 .c-submit::after,
 .c-submit::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -99999;
-  transition: all .4s;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
 }
 
 .c-submit::before {
-  transform: translate(0%, 0%);
-  width: 100%;
-  height: 100%;
-  background: white;
-  border-radius: 10px;
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
 }
 
 .c-submit::after {
-  transform: translate(10px, 10px);
-  width: 35px;
-  height: 35px;
-  background: #ffffff15;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-radius: 50px;
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
 }
 
 .c-submit:hover::before {
-  transform: translate(5%, 20%);
-  width: 110%;
-  height: 110%;
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
 }
 
 .c-submit:hover::after {
-  border-radius: 10px;
-  transform: translate(0, 0);
-  width: 100%;
-  height: 100%;
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
 }
 
 .c-submit:active::after {
-  transition: 0s;
-  transform: translate(0, 5%);
+    transition: 0s;
+    transform: translate(0, 5%);
 }
 
 .c-info-item {
