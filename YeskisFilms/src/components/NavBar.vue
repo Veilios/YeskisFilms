@@ -1,6 +1,3 @@
-<script setup>
-</script>
-
 <template>
     <header>
         <div class="wrapper">
@@ -9,7 +6,7 @@
                 <a href="#about">About</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#contact">Contact</a>
-                <DropDownVue title="Lang" :items="lang" />
+                <DropDownVue @click.prevent="" title="Lang" :opt="opt" :lang="lang" @changing-language="newLang"/>
             </nav>
         </div>
     </header>
@@ -22,23 +19,13 @@ import DropDownVue from './DropDown.vue';
 
 export default {
     name: 'navbar',
+    props: ['opt', "lang"],
     components: {
         DropDownVue
     },
-    data() {
-        return {
-            lang: [
-                {
-                    title: 'Es',
-                    link: "#",
-                    active: true
-                },
-                {
-                    title: 'En',
-                    link: "#",
-                    active: false
-                }
-            ]
+    methods: {
+        newLang: function() {
+            this.$emit("new-language");
         }
     }
 }

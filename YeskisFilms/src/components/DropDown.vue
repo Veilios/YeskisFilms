@@ -11,8 +11,8 @@
 
         <transition name="fade" appear>
             <div class="sub-menu" v-if="isOpen">
-                <div v-for="(item, i) in items" :key="i">
-                    <a :href="item.link" v-on:click="item.active = !item.active">{{ item.title }}</a>
+                <div v-for="(op, i) in opt" :key="i">
+                    <a :href="op.link" @click="sendLang">{{ op.title }}</a>
                 </div>
             </div>
         </transition>
@@ -22,7 +22,12 @@
 <script>
 export default {
     name: 'dropdown',
-    props: ['title', 'items'],
+    props: ['title', 'opt', "lang"],
+    methods: {
+        sendLang: function() {
+            this.$emit("changing-language")
+        }
+    },
     data() {
         return {
             isOpen: false

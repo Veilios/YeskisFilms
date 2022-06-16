@@ -7,15 +7,44 @@ import HomeViewVue from "./views/HomeView.vue";
 </script>
 
 <template>
-  <NavBarVue/>
+  <NavBarVue :opt="opt" :lang="lang" @new-language="handleLang"/>
   <HomeViewVue />
-  <AboutViewVue />
-  <GalleryViewVue />
-  <ContactViewVue />
+  <AboutViewVue :lang="lang"/>
+  <GalleryViewVue/>
+  <ContactViewVue/>
 </template>
 
 <script>
+export default {
+  methods: {
+    handleLang: function() {
+      if (this.lang === "Es") {
+        this.lang = "En"
+      } else [
+        this.lang = "Es"
+      ]
 
+      console.log(this.lang)
+    }
+  },
+  data() {
+    return {
+      opt: [
+        {
+          title: 'Es',
+          link: "#",
+          active: true
+        },
+        {
+          title: 'En',
+          link: "#",
+          active: false
+        }
+      ],
+      lang: "Es"
+    }
+  }
+}
 </script>
 
 <style>

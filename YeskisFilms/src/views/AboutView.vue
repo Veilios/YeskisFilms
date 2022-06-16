@@ -1,11 +1,12 @@
 <template>
   <div class="about" id="about">
+
     <div class="frame">
       <img class="headshot" src="headshot.jpg" alt="Headshot of Fernando R. Cruz" />
       <h3 class="f_name">Fernando R. Cruz</h3>
     </div>
 
-    <div class="bio">
+    <div class="bio" v-if="this.lang === 'En'">
       <div>
         <h2 class="b_title">Driven by Creativity and Love</h2>
 
@@ -22,19 +23,56 @@
       </div>
 
       <div class="socials">
-        <a href="">
+        <a href="#" v-on:click="handleClick">
           <img src="youtube.png" />
         </a>
-        <a href="">
+        <a href="#">
           <img src="instagram.png" />
         </a>
-        <a href="">
+        <a href="#">
+          <img src="facebook.png" />
+        </a>
+      </div>
+    </div>
+
+    <div class="bio" v-if="this.lang === 'Es'">
+      <div>
+        <h2 class="b_title">Inspirado por Creatividad y Amor</h2>
+
+        <p class="b_text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore
+          magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis
+          aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit
+          anim id est laborum.
+        </p>
+      </div>
+      <div class="socials">
+        <a href="#">
+          <img src="youtube.png" />
+        </a>
+        <a href="#">
+          <img src="instagram.png" />
+        </a>
+        <a href="#">
           <img src="facebook.png" />
         </a>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+
+export default {
+  name: 'about',
+  props: ['lang'],
+}
+</script>
 
 <style>
 @media (min-width: 1024px) {
