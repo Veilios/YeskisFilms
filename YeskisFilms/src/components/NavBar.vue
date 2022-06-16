@@ -1,12 +1,22 @@
 <template>
     <header>
-        <div class="wrapper">
+        <div class="wrapper" v-if="lang === 'Es'">
+            <nav>
+                <a href="#home">Inicio</a>
+                <a href="#about">Acerca de</a>
+                <a href="#gallery">Galeria</a>
+                <a href="#contact">Contacto</a>
+                <DropDownVue @click.prevent="" title="Idioma" :opt="opt" :lang="lang" @changing-language="newLang" />
+            </nav>
+        </div>
+
+        <div class="wrapper" v-if="lang === 'En'">
             <nav>
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#contact">Contact</a>
-                <DropDownVue @click.prevent="" title="Lang" :opt="opt" :lang="lang" @changing-language="newLang"/>
+                <DropDownVue @click.prevent="" title="Lang" :opt="opt" :lang="lang" @changing-language="newLang" />
             </nav>
         </div>
     </header>
@@ -24,7 +34,7 @@ export default {
         DropDownVue
     },
     methods: {
-        newLang: function() {
+        newLang: function () {
             this.$emit("new-language");
         }
     }

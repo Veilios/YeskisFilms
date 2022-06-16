@@ -31,14 +31,8 @@ export default {
     return {
       opt: [
         {
-          title: 'Es',
+          title: 'Es / En',
           link: "#",
-          active: true
-        },
-        {
-          title: 'En',
-          link: "#",
-          active: false
         }
       ],
       lang: "Es"
