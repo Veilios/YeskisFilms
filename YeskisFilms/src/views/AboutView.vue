@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about" id="about">
     <div class="frame">
       <img class="headshot" src="headshot.jpg" alt="Headshot of Fernando R. Cruz" />
       <h3 class="f_name">Fernando R. Cruz</h3>

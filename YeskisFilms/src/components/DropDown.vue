@@ -12,7 +12,7 @@
         <transition name="fade" appear>
             <div class="sub-menu" v-if="isOpen">
                 <div v-for="(item, i) in items" :key="i">
-                    <a :href="item.link">{{ item.title }}</a>
+                    <a :href="item.link" v-on:click="item.active = !item.active">{{ item.title }}</a>
                 </div>
             </div>
         </transition>
@@ -47,5 +47,4 @@ export default {
     height: 3rem;
     justify-content: space-evenly;
 }
-
 </style>

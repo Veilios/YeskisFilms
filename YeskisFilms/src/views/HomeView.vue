@@ -1,5 +1,5 @@
 <template>
-  <div class="Home">
+  <div class="Home" id="home">
     <transition class="fade">
       <h1>Yeskis Films</h1>
     </transition>

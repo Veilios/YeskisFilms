@@ -1,16 +1,15 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <template>
     <header>
         <div class="wrapper">
             <nav>
-                <RouterLink to="/">Home</RouterLink>
-                <RouterLink to="/about">About</RouterLink>
-                <RouterLink to="/gallery">Gallery</RouterLink>
-                <RouterLink to="/contact">Contact</RouterLink>
-                <DropDownVue title="Lang" :items="lang"/>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+                <DropDownVue title="Lang" :items="lang" />
             </nav>
         </div>
     </header>
@@ -26,16 +25,18 @@ export default {
     components: {
         DropDownVue
     },
-    data () {
+    data() {
         return {
             lang: [
                 {
-                    title: 'En',
-                    link: "#"
+                    title: 'Es',
+                    link: "#",
+                    active: true
                 },
                 {
-                    title: 'Es',
-                    link: "#"
+                    title: 'En',
+                    link: "#",
+                    active: false
                 }
             ]
         }
