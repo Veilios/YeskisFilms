@@ -47,9 +47,11 @@ export default {
 <style>
 nav {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    padding-right: 1rem;
+    padding: 1rem;
+    position: fixed;
+    right: 0;
+    top: 0;
 }
 
 a {
