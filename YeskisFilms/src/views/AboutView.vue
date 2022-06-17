@@ -58,7 +58,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF;
     height: 95vh;
   }
 
@@ -68,6 +67,7 @@ export default {
     left: 204px;
     top: 230px;
     background: #FFF;
+    box-shadow: 0 0 10px 5px gray;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -88,7 +88,6 @@ export default {
   .f_name {
     font-style: normal;
     font-weight: 400;
-    color: #444;
     padding-top: 0.3rem;
   }
 

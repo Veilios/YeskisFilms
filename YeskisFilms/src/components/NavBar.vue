@@ -52,7 +52,7 @@ nav {
     top: 0;
     z-index: 2;
     width: 100%;
-    background-color: black;
+    background-color: #235789;
 }
 
 a {
@@ -62,7 +62,7 @@ a {
 }
 
 nav a:hover {
-    color: cyan;
+    color: #FB3640;
     transition: ease-in 0.5s;
 }
 

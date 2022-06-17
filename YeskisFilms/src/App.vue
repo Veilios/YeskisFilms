@@ -43,8 +43,10 @@ export default {
 
 <style>
 html {
-  background-color: #222;
+  background-color: #FDFFFC;
+  background-image: url(./assests/minimbackground.jpg);
   height: 90vh;
   scroll-behavior: smooth;
+  color: black;
 }
 </style>

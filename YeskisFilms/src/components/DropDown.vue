@@ -24,7 +24,7 @@ export default {
     name: 'dropdown',
     props: ['title', 'opt', "lang"],
     methods: {
-        sendLang: function() {
+        sendLang: function () {
             this.$emit("changing-language")
         }
     },
@@ -51,5 +51,8 @@ export default {
     flex-direction: column;
     height: 3rem;
     justify-content: space-evenly;
+    background-color: #235789;
+    width: 100%;
+    border-radius: 3px;
 }
 </style>

@@ -17,7 +17,6 @@
 h1 {
   display: flex;
   align-items: center;
-  color: white;
   animation: fadeIn 5s;
   -webkit-animation: fadeIn 5s;
 }

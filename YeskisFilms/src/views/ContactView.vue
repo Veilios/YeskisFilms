@@ -103,7 +103,6 @@ export default {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    color: white;
 }
 
 .c {
@@ -129,6 +128,8 @@ export default {
     margin: 10px 0px;
     font-size: 14px;
     padding-left: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
 }
 
 .c-form textarea {
@@ -175,7 +176,7 @@ export default {
     transform: translate(0%, 0%);
     width: 100%;
     height: 100%;
-    background: white;
+    background: #FB3640;
     border-radius: 10px;
 }
 
