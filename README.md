@@ -8,12 +8,12 @@ This site is going to be built using the following technologies:
 
 
 ## Objectives
-    - Add langauages tab into navbar as an option to switch entire site to
-      to a different langauages
-    
     - Add parameters to emailjs sendEmail() function
+    
+    - Add some animations on scroll 
 
-    - Create Gallery page that will have some of his favorite photos and The most
-      recent youtube video
+    - Make mobile responsive
+    
+    - Add official logo
 
     
