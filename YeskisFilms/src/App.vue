@@ -1,7 +1,7 @@
 <script setup>
 import NavBarVue from "./components/NavBar.vue";
 import AboutViewVue from "./views/AboutView.vue";
-import GalleryViewVue from "./views/GalleryView.vue";
+import PortfolioViewVue from "./views/PortfolioView.vue";
 import ContactViewVue from "./views/ContactView.vue";
 import HomeViewVue from "./views/HomeView.vue";
 </script>
@@ -10,7 +10,7 @@ import HomeViewVue from "./views/HomeView.vue";
   <NavBarVue :opt="opt" :lang="lang" @new-language="handleLang"/>
   <HomeViewVue />
   <AboutViewVue :lang="lang"/>
-  <GalleryViewVue :lang="lang"/>
+  <PortfolioViewVue :lang="lang"/>
   <ContactViewVue :lang="lang"/>
 </template>
 

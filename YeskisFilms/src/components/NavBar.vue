@@ -4,7 +4,7 @@
             <nav>
                 <a href="#home">Inicio</a>
                 <a href="#about">Acerca de</a>
-                <a href="#gallery">Galeria</a>
+                <a href="#gallery">Portafolio</a>
                 <a href="#contact">Contacto</a>
                 <DropDownVue @click.prevent="" title="Idioma" :opt="opt" :lang="lang" @changing-language="newLang" />
             </nav>
@@ -14,7 +14,7 @@
             <nav>
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
-                <a href="#gallery">Gallery</a>
+                <a href="#gallery">Portfolio</a>
                 <a href="#contact">Contact</a>
                 <DropDownVue @click.prevent="" title="Lang" :opt="opt" :lang="lang" @changing-language="newLang" />
             </nav>

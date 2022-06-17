@@ -1,5 +1,5 @@
 <template>
-    <div class="gallery" id="gallery">
+    <div class="portfolio" id="portfolio">
         <!-- In Spanish -->
         <h3 v-if="this.lang === 'Es'">¡Echa un vistazo a algunos de mis trabajos!</h3>
 
@@ -76,7 +76,7 @@ export default {
 </script>
 
 <style>
-.gallery {
+.portfolio {
     min-height: 90vh;
     display: flex;
     flex-direction: column;
