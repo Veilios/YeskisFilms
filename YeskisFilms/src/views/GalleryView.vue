@@ -8,40 +8,62 @@
 
 
         <div class="computers">
-            <div class="md-macbook-pro">
-                <div class="md-lid">
-                    <div class="md-camera"></div>
 
-                    <div class="md-screen">
-                        <img class="screenshot" src="../assests/ferinsta.png" alt="Screenshot of instagram profile" />
+            <div class="group">
+                <h5>Instagram</h5>
+
+                <a class="instalink" href="https://www.instagram.com/ferrezcru_yeski/">
+                    <div class="md-macbook-pro">
+                        <div class="md-lid">
+                            <div class="md-camera"></div>
+
+                            <div class="md-screen">
+                                <img class="screenshot" src="../assests/ferinsta.png"
+                                    alt="Screenshot of instagram profile" />
+                            </div>
+
+                        </div>
+                        <div class="md-base"></div>
                     </div>
-
-                </div>
-                <div class="md-base"></div>
+                </a>
             </div>
 
-            <div class="md-macbook-pro">
-                <div class="md-lid">
-                    <div class="md-camera"></div>
+            <div class="group">
+                <h5>Youtube</h5>
 
-                    <div class="md-screen">
-                        <!-- Info here -->
+                <a class="facelink" href="https://www.youtube.com/channel/UCZIcfGDX_cA7Z0a7pM5o5HA/featured">
+                    <div class="md-macbook-pro">
+                        <div class="md-lid">
+                            <div class="md-camera"></div>
+
+                            <div class="md-screen">
+                                <img class="screenshot" src="../assests/feryoutube.png"
+                                    alt="Screenshot of Youtube channel" />
+                            </div>
+
+                        </div>
+                        <div class="md-base"></div>
                     </div>
-
-                </div>
-                <div class="md-base"></div>
+                </a>
             </div>
 
-            <div class="md-macbook-pro">
-                <div class="md-lid">
-                    <div class="md-camera"></div>
+            <div class="group">
+                <h5>Facebook</h5>
 
-                    <div class="md-screen">
-                        <!-- Info here -->
+                <a class="facelink" href="https://www.facebook.com/profile.php?id=100035027718099">
+                    <div class="md-macbook-pro">
+                        <div class="md-lid">
+                            <div class="md-camera"></div>
+
+                            <div class="md-screen">
+                                <img class="screenshot" src="../assests/ferfacebook.png"
+                                    alt="Screenshot of Facebook profile" />
+                            </div>
+
+                        </div>
+                        <div class="md-base"></div>
                     </div>
-
-                </div>
-                <div class="md-base"></div>
+                </a>
             </div>
         </div>
     </div>
@@ -69,6 +91,13 @@ export default {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
 }
 
 .md-macbook-pro {
