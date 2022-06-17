@@ -11,7 +11,7 @@ import HomeViewVue from "./views/HomeView.vue";
   <HomeViewVue />
   <AboutViewVue :lang="lang"/>
   <GalleryViewVue/>
-  <ContactViewVue/>
+  <ContactViewVue :lang="lang"/>
 </template>
 
 <script>

@@ -1,5 +1,42 @@
 <template>
-    <div class="contact" id="contact">
+    <!-- En espanol -->
+    <div class="contact" id="contact" v-if="this.lang === 'Es'">
+        <h3>Gustas calaborar en un proyecto? Manda me un mensaje!</h3>
+
+        <div class="c">
+            <div class="c-info">
+                <div class="c-info-item">
+                    <img src="email.png" alt="email icon" />
+                    fernandocruz@gmail.com
+                </div>
+
+                <div class="c-info-item">
+                    <img src="location.png" alt="location icon" />
+                    Arandas, Jalisco
+                </div>
+
+                <div class="c-info-item">
+                    <img src="whatsapp.png" alt="whatsapp icon" />
+                    +52 348-465-5776
+                </div>
+            </div>
+
+            <form class="c-form" ref="form" @submit.prevent="sendEmail" v-if="sent === false">
+                <input type="text" name="user_name" placeholder="Nombre" />
+
+                <input type="text" name="user_email" placeholder="Correo" />
+
+                <textarea name="message" placeholder="Mensaje"></textarea>
+
+                <button class="c-submit" type="submit" value="Send" v-on:click="sent = true">Enviar</button>
+            </form>
+
+            <p class="success" v-if="sent === true">Gracias! Pronto estare en contacto!</p>
+        </div>
+    </div>
+
+    <!-- In english -->
+    <div class="contact" id="contact" v-if="this.lang === 'En'">
         <h3>Want to collaborate? Get in touch!</h3>
 
         <div class="c">
@@ -44,6 +81,7 @@ export default {
             sent: false
         }
     },
+    props: ['lang'],
     methods: {
         sendEmail() {
             emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.$refs.form, 'YOUR_PUBLIC_KEY')
