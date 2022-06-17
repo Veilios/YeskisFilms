@@ -6,17 +6,17 @@
         <div class="c">
             <div class="c-info">
                 <div class="c-info-item">
-                    <img src="email.png" alt="email icon" />
+                    <img src="../assests/email.png" alt="email icon" />
                     fernandocruz@gmail.com
                 </div>
 
                 <div class="c-info-item">
-                    <img src="location.png" alt="location icon" />
+                    <img src="../assests/location.png" alt="location icon" />
                     Arandas, Jalisco
                 </div>
 
                 <div class="c-info-item">
-                    <img src="whatsapp.png" alt="whatsapp icon" />
+                    <img src="../assests/whatsapp.png" alt="whatsapp icon" />
                     +52 348-465-5776
                 </div>
             </div>

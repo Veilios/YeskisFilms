@@ -10,7 +10,7 @@ import HomeViewVue from "./views/HomeView.vue";
   <NavBarVue :opt="opt" :lang="lang" @new-language="handleLang"/>
   <HomeViewVue />
   <AboutViewVue :lang="lang"/>
-  <GalleryViewVue/>
+  <GalleryViewVue :lang="lang"/>
   <ContactViewVue :lang="lang"/>
 </template>
 

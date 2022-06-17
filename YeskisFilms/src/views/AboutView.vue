@@ -2,7 +2,7 @@
   <div class="about" id="about">
 
     <div class="frame">
-      <img class="headshot" src="headshot.jpg" alt="Headshot of Fernando R. Cruz" />
+      <img class="headshot" src="../assests/headshot.jpg" alt="Headshot of Fernando R. Cruz" />
       <h3 class="f_name">Fernando R. Cruz</h3>
     </div>
 
@@ -21,18 +21,6 @@
           anim id est laborum.
         </p>
       </div>
-
-      <div class="socials">
-        <a href="#" v-on:click="handleClick">
-          <img src="youtube.png" />
-        </a>
-        <a href="#">
-          <img src="instagram.png" />
-        </a>
-        <a href="#">
-          <img src="facebook.png" />
-        </a>
-      </div>
     </div>
 
     <div class="bio" v-if="this.lang === 'Es'">
@@ -50,17 +38,6 @@
           sunt in culpa qui officia deserunt mollit
           anim id est laborum.
         </p>
-      </div>
-      <div class="socials">
-        <a href="#">
-          <img src="youtube.png" />
-        </a>
-        <a href="#">
-          <img src="instagram.png" />
-        </a>
-        <a href="#">
-          <img src="facebook.png" />
-        </a>
       </div>
     </div>
   </div>
