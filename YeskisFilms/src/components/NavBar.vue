@@ -6,7 +6,10 @@
                 <a href="#about">Acerca de</a>
                 <a href="#portfolio">Portafolio</a>
                 <a href="#contact">Contacto</a>
-                <DropDownVue @click.prevent="" title="Idioma" :opt="opt" :lang="lang" @changing-language="newLang" />
+                <a>
+                    <DropDownVue @click.prevent="" title="Idioma" :opt="opt" :lang="lang"
+                        @changing-language="newLang" />
+                </a>
             </nav>
         </div>
 
@@ -16,7 +19,9 @@
                 <a href="#about">About</a>
                 <a href="#portfolio">Portfolio</a>
                 <a href="#contact">Contact</a>
-                <DropDownVue @click.prevent="" title="Lang" :opt="opt" :lang="lang" @changing-language="newLang" />
+                <a>
+                    <DropDownVue @click.prevent="" title="Lang" :opt="opt" :lang="lang" @changing-language="newLang" />
+                </a>
             </nav>
         </div>
     </header>
@@ -52,13 +57,26 @@ nav {
     top: 0;
     z-index: 2;
     width: 100%;
-    background-color: #235789;
+    height: 30px;
+    background: linear-gradient(#235789, transparent);
 }
 
 a {
     text-decoration: none;
     padding: 0 1rem;
     color: white;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 nav a:hover {
@@ -68,5 +86,9 @@ nav a:hover {
 
 nav a:not(:first-child) {
     border-left: white solid 1px;
+}
+
+nav a:last-child {
+    padding-left: 0;
 }
 </style>

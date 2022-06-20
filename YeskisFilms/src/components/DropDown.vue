@@ -37,9 +37,9 @@ export default {
 </script>
 
 <style>
-.menu-item {
+/* .menu-item {
     border-left: solid white 1px;
-}
+} */
 
 .menu-item a {
     padding-right: 0.4rem;
