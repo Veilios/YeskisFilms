@@ -15,6 +15,11 @@ import HomeViewVue from "./views/HomeView.vue";
 </template>
 
 <script>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default {
   methods: {
     handleLang: function() {
