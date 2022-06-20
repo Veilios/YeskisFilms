@@ -20,6 +20,19 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+gsap.to(".portfolio", {
+  scrollTrigger: {
+    trigger: ".portfolio",
+    start: "top center",
+    end: "+=500",
+    scrub: 3,
+    toggleActions: "restart pause reverse pause"
+  },
+  y: 400,
+  duration: 2
+});
+
 export default {
   methods: {
     handleLang: function() {
