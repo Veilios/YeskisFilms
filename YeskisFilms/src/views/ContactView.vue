@@ -1,7 +1,7 @@
 <template>
     <!-- En espanol -->
     <div class="contact" id="contact" v-if="this.lang === 'Es'">
-        <h3>Gustas calaborar en un proyecto? Manda me un mensaje!</h3>
+        <h3 class="c-title">Gustas calaborar en un proyecto? Manda me un mensaje!</h3>
 
         <div class="c">
             <div class="c-info">
@@ -37,7 +37,7 @@
 
     <!-- In english -->
     <div class="contact" id="contact" v-if="this.lang === 'En'">
-        <h3>Want to collaborate? Get in touch!</h3>
+        <h3 class="c-title">Want to collaborate? Get in touch!</h3>
 
         <div class="c">
             <div class="c-info">
@@ -111,6 +111,11 @@ export default {
     align-items: flex-start;
 }
 
+.c-title {
+    font-style: italic;
+    font-weight: 800;
+}
+
 .c-form {
     width: 30rem;
     height: 40vh;
@@ -160,6 +165,7 @@ export default {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    font-weight: 500;
 }
 
 .c-submit::after,

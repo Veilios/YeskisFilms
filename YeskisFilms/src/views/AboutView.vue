@@ -59,6 +59,7 @@ export default {
     justify-content: center;
     align-items: center;
     height: 95vh;
+    font-family: 'EB Garamond', serif;
   }
 
   .frame {
@@ -86,9 +87,10 @@ export default {
   }
 
   .f_name {
-    font-style: normal;
+    font-family: 'Smooch', cursive;
     font-weight: 400;
     padding-top: 0.3rem;
+    font-size: 1.5rem;
   }
 
   .bio {
@@ -102,8 +104,12 @@ export default {
   }
 
   .b_title {
-    font-style: normal;
-    font-weight: 400;
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  .b_text {
+    font-weight: 500;
   }
 
   .socials {

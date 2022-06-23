@@ -7,38 +7,21 @@ import HomeViewVue from "./views/HomeView.vue";
 </script>
 
 <template>
-  <NavBarVue :opt="opt" :lang="lang" @new-language="handleLang"/>
+  <NavBarVue :opt="opt" :lang="lang" @new-language="handleLang" />
   <HomeViewVue />
-  <AboutViewVue :lang="lang"/>
-  <PortfolioViewVue :lang="lang"/>
-  <ContactViewVue :lang="lang"/>
+  <AboutViewVue :lang="lang" />
+  <PortfolioViewVue :lang="lang" />
+  <ContactViewVue :lang="lang" />
 </template>
 
 <script>
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
-
-gsap.to(".portfolio", {
-  scrollTrigger: {
-    trigger: ".portfolio",
-    start: "top center",
-    end: "+=500",
-    scrub: 3,
-    toggleActions: "restart pause reverse pause"
-  },
-  y: 400,
-  duration: 2
-});
 
 export default {
   methods: {
-    handleLang: function() {
+    handleLang: function () {
       if (this.lang === "Es") {
         this.lang = "En"
-      } else [
+      } else[
         this.lang = "Es"
       ]
 
@@ -66,5 +49,6 @@ html {
   height: 90vh;
   scroll-behavior: smooth;
   color: black;
+  font-family: 'EB Garamond', serif;
 }
 </style>

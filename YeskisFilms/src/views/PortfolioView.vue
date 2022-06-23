@@ -1,16 +1,16 @@
 <template>
     <div class="portfolio" id="portfolio">
         <!-- In Spanish -->
-        <h3 v-if="this.lang === 'Es'">¡Echa un vistazo a algunos de mis trabajos!</h3>
+        <h3 class="p_title" v-if="this.lang === 'Es'">¡Echa un vistazo a algunos de mis trabajos!</h3>
 
         <!-- In English -->
-        <h3 v-if="this.lang === 'En'">Take a look at some of my work!</h3>
+        <h3 class="p_title" v-if="this.lang === 'En'">Take a look at some of my work!</h3>
 
 
         <div class="computers">
 
             <div class="group">
-                <h5>Instagram</h5>
+                <h4 class="comp_title">Instagram</h4>
 
                 <a class="instalink" href="https://www.instagram.com/ferrezcru_yeski/">
                     <div class="md-macbook-pro">
@@ -29,7 +29,7 @@
             </div>
 
             <div class="group">
-                <h5>Youtube</h5>
+                <h4 class="comp_title">Youtube</h4>
 
                 <a class="facelink" href="https://www.youtube.com/channel/UCZIcfGDX_cA7Z0a7pM5o5HA/featured">
                     <div class="md-macbook-pro">
@@ -48,7 +48,7 @@
             </div>
 
             <div class="group">
-                <h5>Facebook</h5>
+                <h4 class="comp_title">Facebook</h4>
 
                 <a class="facelink" href="https://www.facebook.com/profile.php?id=100035027718099">
                     <div class="md-macbook-pro">
@@ -84,12 +84,21 @@ export default {
     align-items: center;
 }
 
+.p_title {
+    font-style: italic;
+    font-weight: 800;
+}
+
 .computers {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.comp_title {
+    font-weight: 500;
 }
 
 .group {
