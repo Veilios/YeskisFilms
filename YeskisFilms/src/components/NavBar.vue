@@ -1,6 +1,11 @@
 <template>
     <header>
+
+        <!-- Spanish version -->
         <div class="wrapper" v-if="lang === 'Es'">
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle">
+
             <nav>
                 <a href="#home">Inicio</a>
                 <a href="#about">Acerca de</a>
@@ -13,7 +18,11 @@
             </nav>
         </div>
 
+        <!-- English Version -->
         <div class="wrapper" v-if="lang === 'En'">
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle">
+
             <nav>
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
@@ -55,17 +64,19 @@ nav {
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 2;
     width: 100%;
     height: 30px;
-    background: linear-gradient(#235789, transparent);
+    background-color: #235789;
+    box-shadow: 0 0 10px 10px #235789;
+    z-index: 1;
 }
 
-a {
+nav a {
     text-decoration: none;
     padding: 0 1rem;
     color: white;
     animation: fadeInRight 1s ease-in-out;
+    clear: right;
 }
 
 @keyframes fadeInRight {
@@ -90,5 +101,91 @@ nav a:not(:first-child) {
 
 nav a:last-child {
     padding-left: 0;
+}
+
+label {
+    margin: 0 15px 0 0;
+    font-size: 26px;
+    color: white;
+    display: none;
+    width: 26px;
+    float: right;
+    position: fixed;
+}
+
+#toggle {
+    display: none;
+}
+
+@media (max-width:992px) {
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    label {
+        display: flex;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    nav {
+        justify-content: center;
+        align-self: flex-end;
+        width: 100%;
+        display: none;
+        background-color: #235789;
+        height: 250px;
+    }
+
+    nav a {
+        display: flex;
+        margin: 0;
+        padding-top: 10px;
+        animation: fadeIn 0.5s ease-in both;
+    }
+
+    nav a:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+
+    nav a:nth-child(3) {
+        animation-delay: 1s;
+    }
+
+    nav a:nth-child(4) {
+        animation-delay: 1.5s;
+    }
+
+    nav a:nth-child(5) {
+        animation-delay: 2s;
+    }
+
+    nav a:not(:first-child) {
+        border-left: none;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translate3d(0, -20%, 0);
+        }
+
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    svg {
+        display: none;
+    }
+
+    #toggle:checked+nav {
+        display: flex;
+        flex-direction: column;
+    }
 }
 </style>

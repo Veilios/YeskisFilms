@@ -45,11 +45,26 @@ export default {
     position: absolute;
     display: flex;
     flex-direction: column;
-    height: 3rem;
+    height: 2.5rem;
+    margin-top: 1rem;
     justify-content: space-evenly;
-    background: linear-gradient(transparent, #235789);
+    /* background: linear-gradient(transparent, #235789); */
+    background-color: #235789;
+    box-shadow: 0 0 5px 10px #235789;
     width: 100%;
     border-radius: 3px;
     padding-left: 1rem;
+}
+
+@media (max-width:992px) {
+    .menu-item a {
+        margin: 0;
+        text-align: center;
+    }
+
+    .menu-item .sub-menu {
+        background-color: none;
+        box-shadow: none;
+    }
 }
 </style>

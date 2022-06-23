@@ -124,6 +124,7 @@ export default {
     padding: 0 3rem;
     margin: 0 3rem;
     justify-content: space-between;
+    
 }
 
 .c-form input {
@@ -230,5 +231,43 @@ export default {
 .c-info-item img:hover {
     transform: scale(1.3);
     transition: ease-in 0.5s;
+}
+
+@media (max-width:992px) {
+    .contact {
+        margin: 15rem;
+        flex-direction: column;
+    }
+
+    .c {
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .c-title {
+        justify-content: center;
+        text-align: center;
+        width: 15em;
+        font-weight: 600;
+    }
+
+    .c-form {
+        width: auto;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+
+    .c-form input {
+        width: auto;
+    }
+
+    .c-form textarea {
+        width: auto;
+        height: 5rem;
+    }
+
 }
 </style>

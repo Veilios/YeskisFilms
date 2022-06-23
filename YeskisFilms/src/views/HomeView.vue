@@ -30,4 +30,10 @@ h1 {
     opacity: 1;
   }
 }
+
+@media (max-width:992px) {
+  .Home{
+    height: 100vh;
+  }
+}
 </style>

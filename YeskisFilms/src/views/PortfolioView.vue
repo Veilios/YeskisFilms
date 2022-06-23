@@ -82,6 +82,7 @@ export default {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    z-index: 0;
 }
 
 .p_title {
@@ -105,12 +106,12 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .md-macbook-pro {
     width: 55.3125em;
-    height: 31.875em;
+    /* height: 31.875em; */
     font-size: 0.4em;
 }
 
@@ -217,5 +218,21 @@ export default {
 
 .screenshot:hover {
     object-position: bottom center;
+}
+
+@media (max-width:992px) {
+    .portfolio {
+        margin: 3rem 0;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .p_title {
+        margin-top: 5rem;
+    }
+
+    .computers {
+        flex-direction: column;
+    }
 }
 </style>
