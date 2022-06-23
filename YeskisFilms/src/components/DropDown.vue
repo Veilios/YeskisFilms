@@ -37,10 +37,6 @@ export default {
 </script>
 
 <style>
-/* .menu-item {
-    border-left: solid white 1px;
-} */
-
 .menu-item a {
     padding-right: 0.4rem;
 }
@@ -51,8 +47,9 @@ export default {
     flex-direction: column;
     height: 3rem;
     justify-content: space-evenly;
-    background-color: #235789;
+    background: linear-gradient(transparent, #235789);
     width: 100%;
     border-radius: 3px;
+    padding-left: 1rem;
 }
 </style>
