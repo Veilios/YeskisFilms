@@ -11,4 +11,5 @@ This site is going to be built using the following technologies:
         
     - Add official logo
 
+    - Add basic info or turn into concept project
     
